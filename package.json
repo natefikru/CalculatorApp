@@ -1,0 +1,50 @@
+{
+  "name": "calculator-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^4.3.1",
+    "calculator-modules": "^1.1.0",
+    "happycalculator": "^1.3.6",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-calculator": "0.0.2",
+    "react-dom": "^16.9.0",
+    "react-native-calculator": "^0.5.2",
+    "react-scripts": "3.1.1",
+    "rust-calculator": "^0.1.2",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "latest",
+    "uuid": "^3.3.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "scripts": {
+    "start": "concurrently 'npm run react' 'npm run server'",
+    "react": "react-scripts start",
+    "server": "nodemon src/server/index.js",
+    "build": "webpack",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2",
+    "webpack": "^4.39.1"
+  }
+}
