@@ -4,7 +4,7 @@ import {USER_CONNECTED, LOGOUT, CALCULATOR_START, CALCULATION_RECEIVED} from '..
 import Login from './Login'
 import CalcContainer from '../calculator/CalcContainer'
 
-const socketUrl = "0.0.0.0:3231";
+const socketUrl = "54.14.162.51:3231";
 
 export default class Layout extends Component {
 
@@ -25,8 +25,8 @@ export default class Layout extends Component {
 
     initSocket = () => {
       const socket = io(socketUrl);
-      socket.on('connect', ()=>{
-          console.log("connected")
+      socket.on('connect', () => {
+          console.log("connected");
           this.setState({socket});
           socket.emit(CALCULATOR_START);
           socket.on(CALCULATION_RECEIVED, (calculations) => {
